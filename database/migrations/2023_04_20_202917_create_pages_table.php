@@ -18,10 +18,6 @@ return new class extends Migration
             $table->timestamp('expires_at');
             $table->boolean('disabled')->default(false);
             $table->timestamps();
-
-            $table->foreign('user_id')
-                    ->references('id')->on('users')
-                    ->onDelete('cascade');
         });
     }
 
