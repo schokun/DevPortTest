@@ -18,11 +18,6 @@ return new class extends Migration
             $table->float('win_sum');
             $table->integer('number');
             $table->unsignedBigInteger('user_id');
-
-
-            $table->foreign('user_id')
-                    ->references('id')->on('users')
-                    ->onDelete('cascade');
         });
     }
 
